@@ -14,7 +14,7 @@ ci = function(X, y, alpha = 0.05) {
 
   vcov = sigma_sq * inv_x
 
-  se = sqrt(diag(vcov_matrix))
+  se = sqrt(diag(vcov))
 
   df = nrow(X) - ncol(X)
   tscore = qt(1 - alpha / 2, df)
