@@ -1,6 +1,6 @@
 # dumbmeinregression: an R package for Simple linear regression intro calculation 
 
-**dumbmeinregression** I know this name is too long for you. The reason why I am writing this package is because below these functions I always forget in my BIOS650 course and I got a bad grade on the first midterm. So I write a mini package to commemorate them.
+**dumbmeinregression**: I know this name is too long for you. The reason why I am writing this package is because below these functions I always forget in my BIOS650 course and I got a bad grade on the first midterm. So I write a mini package to commemorate them.
 
 ## Main Features
 
