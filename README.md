@@ -7,7 +7,7 @@
 - **R-Squared (r_squared())**: R_Squared is the proportion of variance in the dependent variable explained by the model. Optional for you have Adjusted_R_Squared, this tells you how well a model explains the variance in the dependent variable, considering the number of independent variables used in the model.
 
 - **Plot the regression**:  uses fitted value which we first fit the SLR model. Then it helps you plot the data points and the regression line, along with a best-fit line.
-- 
+
 - **Confidence Interval**: calculates confidence intervals for the regression in a simple linear regression model or multiple regression model.
 
 ## Installation
