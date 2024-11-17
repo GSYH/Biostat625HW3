@@ -2,18 +2,18 @@
 \alias{Confiden_inter}
 \title{Confidence Interval for regression model calculation}
 \usage{
-ci <- function(X, y, alpha = 0.05)
+ci(X, y, alpha = 0.05)
 }
 \arguments{
     \item{X}{vector or matrix representing the predictor. if using simple linear regression, this can either be vector or vector as you like. If you wish have a multiple linear regression, this should be a matrix of predictors}
-    \item{y}{observed values of the dependent variable}
+    \item{y}{observed values of the dependent variable(vector or numeric values)}
     \item{alpha}{The significance level for the confidence interval. Default is 0.05, which is 95 percent confidence interval}
 }
 \value{
 The function return a list:
   \item{Lower_CI}{Lower confidence interval}
   \item{Upper_CI}{upper confidence interval}
-
+}
 \description{
 This function calculates confidence intervals for the regression in a simple linear regression model or mutiple regression model. We use beta_hat minus or plus t_value * standard_errors
 }

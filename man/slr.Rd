@@ -1,15 +1,13 @@
 \name{slr}
 \alias{slr}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{Simple linear regression fitting
 }
 \usage{
-slr((x, y)
+slr(x, y)
 }
 \arguments{
     \item{x}{the independent variable}
     \item{y}{observed values of the dependent variable}
-
 }
 \value{
 The function return a list:

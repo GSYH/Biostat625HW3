@@ -1,18 +1,18 @@
 \name{plot_regression}
 \alias{plot_regression}
-\title{Plot the regression}
+\title{Plot a Simple Linear Regression}
 \usage{
 plot_regression(x, y)
 }
 \arguments{
-    \item{x}{the independent variable}
-    \item{y}{observed values of the dependent variable}
+    \item{x}{the independent variable(predictor)}
+    \item{y}{observed values of the dependent variable(response)}
 }
 \value{
 A plot return a graphic between x and y input value, but no value is returned by the function
 }
 \description{
-This function uses the slr() function to compute the slope and intercept for a simple linear regression model. It then plots the data points and the regression line, along with a legend indicating the line of best fit
+This function uses the \code{slr()} function to compute the slope and intercept for a simple linear regression model. It then plots the data points and the regression line, along with a legend indicating the line of best fit
 }
 
 \examples{

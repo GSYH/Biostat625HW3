@@ -2,10 +2,10 @@
 \alias{r_squared}
 \title{R-Squared and Adjusted R-Squared Calculation}
 \usage{
-r_squared((y, fitted_values, p = 1, withadjr = FALSE)
+r_squared(y, fitted_values, p = 1, withadjr = FALSE)
 }
-\arguments{\item{y}{observed values of the dependent variable}
-           \item{fitted_values}{predicted values of the dependent variable from the model}
+\arguments{\item{y}{observed values of the dependent variable(vector or numeric values)}
+           \item{fitted_values}{predicted values of the dependent variable from the model(vector or numeric values)}
            \item{p}{number of predictors in the model, function will help you exclude intercept. 1 is default value for a simple linear regression}
            \item{withadjr}{if `TRUE`, function should return both R-squared and Adjusted R-squared. In default `FALSE`, function return only R-squared}
 }
