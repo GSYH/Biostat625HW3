@@ -72,9 +72,7 @@ print(Confiden_inter_result)
 ## Tutorial
 
 - Directly download the .html file called 'MLST-Tutorial' in the main branch and open it in your browser.
-  
-```
 
 ## Getting help
 
-- please check out the help page after you install the package. On your package bar, i write help page for you, just by click the package name!
+- please check out the help page after you install the package. On your package bar, I write a help page for you, just by clicking the package name!
