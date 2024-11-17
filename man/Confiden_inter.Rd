@@ -13,7 +13,7 @@ ci <- function(X, y, alpha = 0.05)
 The function return a list:
   \item{Lower_CI}{Lower confidence interval}
   \item{Upper_CI}{upper confidence interval}
-}
+
 \description{
 This function calculates confidence intervals for the regression in a simple linear regression model or mutiple regression model. We use beta_hat minus or plus t_value * standard_errors
 }
