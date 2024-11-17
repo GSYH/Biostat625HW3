@@ -1,69 +1,80 @@
-# MLST: Statistical Analysis and Regression Tools in R
+# dumbmeinregression: a R package for Simple linear regression intro calculation 
 
-**MLST** is a R package for obtaining tests results and statistics of a linear regression models
+## Main Features
 
-## Features
+- **Simple linear regression model fitting (slr())**: use your independent variable x and observed values of the dependent variable y to get intercept(beta0), slope(beta1), predicted values, and residuals.
 
-- **Residual Standard Error (RSE)**: Compute the residual standard error for linear regression models.
-- **R-Squared (\( R^2 \))**: Calculate the coefficient of determination to assess model fit.
-- **Adjusted R-Squared**: Evaluate the adjusted \( R^2 \), accounting for the number of predictors in the model.
-- **F-test**: Evaluate the overall significance of a multiple linear model, consist of F-statistics, p-value, the first degrees of freedom, and the second degrees of freedom.
-- **T-test**: Evaluate the individual predictors of a multiple linear model, with the corresponding estimate, standard error, t-statistics, p-value.
+- **R-Squared (r_squared())**: R_Squared is the proportion of variance in the dependent variable explained by the model. Optional for you have Adjusted_R_Squared, this tells you how well a model explains the variance in the dependent variable, considering the number of independent variables used in the model.
+
+- **Plot the regression**:  uses fitted value which we first fit the SLR model. Then it helps you plot the data points and the regression line, along with a best-fit line.
+- 
+- **Confidence Interval**: calculates confidence intervals for the regression in a simple linear regression model or multiple regression model.
 
 ## Installation
 
-To install the package, run the following in R:
+Before installing the package: The "auth_token" is your token from Git Hub. If you don't have a token yet, head over here to set up your token or any secure gateway first. https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 
+To install the package, run the following in R.
 ```r
-# Install devtools if not already installed
-install.packages("devtools")
+Sys.getenv("GITHUB_PAT")
+#> [1] ""
+Sys.setenv(GITHUB_PAT = "auth_token")
+nchar(remotes:::github_pat())
+#> [1] 40
 
-# Get permission by this token
-Sys.setenv(GITHUB_PAT = "")
-
-# Install the MLST package from GitHub
-devtools::install_github("Umichyingzhen/MLST")
+remotes::install_github("GSYH/dumbmeinregression")
 ```
 
 ## Usage
 
-Run these functions to get the test results or statistics of interest
+These functions are an example for you!
 
 ```r
-library(MLST)
+library(dumbmeinregression)
 
-# simulated dataset
+#example dataset
 set.seed(123)
-simulate_data <- data.frame(
-  normal = rnorm(100, mean = 10, sd = 5),
-  X1 = rnorm(100),
-  X2 = rnorm(100),
-  X3 = rnorm(100)
-)
+X1 <- rnorm(100)
+X2 <- rnorm(100)
+X3 <- rnorm(100)
+y <- 5 + 2*X1 + 7*X2 + 0.1*X3 + rnorm(100, sd = 5)
+simulate_data1 <- data.frame(y, X1, X2, X3)
 
-# Set up the predictors and dependent variable
-Predictors <- as.matrix(simulate_data[, c("X1", "X2")])
-Y <- as.matrix(simulate_data[, "normal"])
+#we are setting the lowercase x as the only variable for simple linear regression
+x = simulate_data1$X1
+#uppercase X is two variables
+X = cbind(simulate_data1$X1, simulate_data1$X2)
+y = simulate_data1$y
 
-# Get the results
-RSE_result <- RSE(Y, Predictors, simulate_data)
+#you can use slr() get $Beta0, $Beta1, $FittedValues, $Residuals values.
+slr_result = slr(x, y)
+print(slr_result)
 
-Rsquared_result <- Rsquared(Y, Predictors, simulate_data)
-print(Rsquared_result)
+fitted_values = slr_result$FittedValues
+#use r_squared() get R-square 
+r_squared_result_without_adjustedR = r_squared(y, fitted_values, p = 1, withadjr = FALSE)
+print(r_squared_result_without_adjustedR)
 
-ADJRS_result <- ADJRS(Y, Predictors, simulate_data)
-print(ADJRS_result)
+fitted_values = slr_result$FittedValues
+#use r_squared() and withadjr = TRUE get R-square with adjusted R-square.
+r_squared_result_with_adjustedR = r_squared(y, fitted_values, p = 1, withadjr = TRUE)
+print(r_squared_result_with_adjustedR)
 
-Ftest_result <- Ftest(Y, Predictors, simulate_data)
-print(Ftest_result)
+#use this to plot_regression() plot x and y
+plot_regression_result = plot_regression(x, y)
+print(plot_regression_result)
 
-Ttest_result <- Ttest(Y, Predictors, simulate_data)
-print(Ttest_result)
+#use ci() to get the confidence interval. But be careful, we are using uppercase X And the default level is 0.05.
+Confiden_inter_result = ci(X, y, alpha = 0.05)
+print(Confiden_inter_result)
 ```
 
-## Functions
+## Tutorial
 
-### `RSE(Y, Predictors, data)`
-- **Description**: Computes the residual standard error.
-- **Inputs**:
-  - `Y`: The
+- Directly download the .html file called 'MLST-Tutorial' in the main branch and open it in your browser.
+  
+```
+
+## Getting help
+
+- please check out the help page after you install the package. On your package bar, i write help page for you, just by click the package name!
