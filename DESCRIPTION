@@ -2,12 +2,16 @@ Package: dumbmeinregression
 Type: Package
 Title: dumb me in Linear Regression Functions
 Version: 0.1.0
+Date: 2024-11-17
 Author: Shuoyuan Gao
 Maintainer: Shuoyuan Gao <shuoyuan.g@gmail.com>
 Description: This package is mainly about function that i always forgot in biostat 650 course--intro calculation to linear regression i have learned in BIOSTAT650 course which i am currrentlhy taking at university of michigan public health department. This can help model analysis for proteiential user.
 License: GPL-2
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 7.3.2
-Suggests: knitr, rmarkdown
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
+Config/testthat/edition: 3
