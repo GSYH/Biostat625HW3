@@ -22,10 +22,7 @@ ci = function(X, y, alpha = 0.05) {
   lower_ci = beta_hat - tscore * se
   upper_ci = beta_hat + tscore * se
 
-  ci_results = list(
-    Lower_CI = as.vector(lower_ci),
-    Upper_CI = as.vector(upper_ci)
-  )
+  ci_results <- cbind(lower_ci, upper_ci)
 
   return(ci_results)
 }
