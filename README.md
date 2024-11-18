@@ -6,7 +6,7 @@
 
 - **Simple linear regression model fitting**: use your independent variable x and observed values of the dependent variable y to get intercept(beta0), slope(beta1), predicted values, and residuals.
 
-- **R-Squared**: R_Squared is the proportion of variance in the dependent variable explained by the model. Optional for you have Adjusted_R_Squared, this tells you how well a model explains the variance in the dependent variable, considering the number of independent variables used in the model.
+- **R-Squared**: R_Squared is the proportion of variance in the dependent variable explained by the model. Optional for you have Adjusted_R_Squared, this tells you how well a model describes the variance in the dependent variable, considering the number of independent variables used in the model.
 
 - **Plot the regression**:  uses fitted value which we first fit the SLR model. Then it helps you plot the data points and the regression line, along with a best-fit line.
 
@@ -73,7 +73,7 @@ print(Confiden_inter_result)
 
 ## Tutorial
 
-- Directly download the .html file called 'MLST-Tutorial' in the main branch and open it in your browser.
+- Directly download any type of file you like from the vignette folder in the main branch and open it in your browser.
 
 ## Getting help
 
