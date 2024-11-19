@@ -93,8 +93,8 @@ Now we comparing against the original R functions on simulated to demonstrate th
 ```{r}
 lm_slr_model= lm(y ~ X1, data = simulate_data1)
 
-all.equal(slr_result$Beta0, coef(lm_model)[1], check.attributes = FALSE)
-all.equal(slr_result$Beta1, coef(lm_model)[2], check.attributes = FALSE)
+all.equal(slr_result$Beta0, coef(lm_slr_model)[1], check.attributes = FALSE)
+all.equal(slr_result$Beta1, coef(lm_slr_model)[2], check.attributes = FALSE)
 ```
 
 ```{r}
