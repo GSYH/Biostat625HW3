@@ -62,7 +62,7 @@ fitted_values = slr_result$FittedValues
 r_squared_result_with_adjustedR = r_squared(y, fitted_values, p = 1, withadjr = TRUE)
 print(r_squared_result_with_adjustedR)
 
-#use this to plot_regression() plot x and y
+#use this to plot_regression() plot x and y, and also for the plot_regression(), I didn't find a way to all.equal them in the vignette. But they look the same compared to the plot()
 plot_regression_result = plot_regression(x, y)
 print(plot_regression_result)
 
@@ -73,8 +73,8 @@ print(Confiden_inter_result)
 
 ## Tutorial
 
-- Directly download any type of file you like from the vignette folder in the main branch and open it in your browser.
+-You can directly download from the vignette folder in the main branch and open it in your browser.
 
 ## Getting help
 
-- please check out the help page after you install the package. On your package bar, I write a help page for you, just by clicking the package name!
+-Please check out the help page after you install the package. I have written a help page for you on your package bar —just click the package name!
