@@ -14,7 +14,7 @@ mlr = function(X, y) {
   fitted_value = X %*% beta
 
   #get residual
-  residuals = y - fitted_values
+  residuals = y - fitted_value
 
   # this return a list for beta, fitted value and residual.
   result = list(
