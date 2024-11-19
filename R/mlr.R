@@ -19,7 +19,7 @@ mlr = function(X, y) {
   # this return a list for beta, fitted value and residual.
   result = list(
     Beta = beta,
-    FittedValues_mlr = fitted_values,
+    FittedValues_mlr = fitted_value,
     Residuals_mlr = residuals
   )
   return(result)
