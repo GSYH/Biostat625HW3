@@ -6,6 +6,8 @@
 
 - **Simple linear regression model fitting**: use your independent variable x and observed values of the dependent variable y to get intercept(beta0), slope(beta1), predicted values, and residuals.
 
+- **Multiple linear regression model fitting**: use more than one variable X and observed values of the dependent variable y to get Beta, predicted values, and residuals. You are also welcome to use this for only one variable(this function will automatically turn to simple linear regression).
+
 - **R-Squared**: R_Squared is the proportion of variance in the dependent variable explained by the model. Optional for you have Adjusted_R_Squared, this tells you how well a model describes the variance in the dependent variable, considering the number of independent variables used in the model.
 
 - **Plot the regression**:  uses fitted value which we first fit the SLR model. Then it helps you plot the data points and the regression line, along with a best-fit line.
@@ -51,6 +53,10 @@ y = simulate_data1$y
 #you can use slr() get $Beta0, $Beta1, $FittedValues, $Residuals values.
 slr_result = slr(x, y)
 print(slr_result)
+
+#we are setting the uppercase X as more than one variable for multiple linear regression
+mlr_result = mlr(X, y)
+print(mlr_result)
 
 fitted_values = slr_result$FittedValues
 #use r_squared() get R-square 
